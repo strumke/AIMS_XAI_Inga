@@ -222,7 +222,7 @@ def get_relevant_candidates(study, x, model, y_target, tol):
         epsilon_rounding(x, x_prime, 1e-1)
 
         # predict with model
-        prediction = model.predict_proba(x_prime)[0][0]
+        prediction = model.predict_proba(x_prime)[0][1]
         y_primes.append(prediction)
         candidates.append(x_prime.values[0])
 
